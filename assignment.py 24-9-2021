@@ -1,0 +1,168 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+
+
+
+# In[6]:
+
+
+#2
+def numbers(x,y):
+    list1=[]
+    for i in range(x,y):
+        if i%2==0:
+            list1.append(i)
+    print(len(list1))
+
+
+# In[2]:
+
+
+numbers(x=int(input("enter the number")),y=int(input("enter the number")))
+
+
+# In[3]:
+
+
+#3
+import math
+def factorials(n):
+    a=[]
+    for i in range(n,0,-1):
+        a.append(i)
+    b=[]
+    for i in a:
+        df=math.factorial(i)
+        b.append(df)
+    cv=1
+    for i in b:
+        cv *= i
+    return cv
+
+
+# In[4]:
+
+
+factorials(4)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[5]:
+
+
+#5
+def num(a,b):
+    print("sum of a and b",a+b)
+    print("difference of a and b",a-b)
+    print("multiplication of a and b",a*b)
+    if b==0:
+        print(-1)
+    else:
+        print("division of a and b",a//b)
+num(a=int(input("enter the number")),b=int(input("enter the number")))
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[42]:
+
+
+#1
+def binary(num):
+    b_num = bin(num)
+    b_list = list(b_num)
+    b_list = b_list[2:]
+    l = []
+    for i in b_list:
+        l.append(int(i))
+    print(l)
+    length = len(l)
+        
+      
+    
+    count = 0
+    res = 0
+    for j in range(length):
+        if l[j] == 1:
+            count = 0
+
+        else:
+            count = count + 1
+            #print(count)
+            res = max(res,count)
+    print(res)
+    
+
+
+# In[43]:
+
+
+bin(7526)
+
+
+# In[44]:
+
+
+binary(7526)
+
+
+# In[50]:
+
+
+#5
+from itertools import permutations
+
+def mutations(x,y):
+    perm = permutations([2, 3])
+    for i in list(perm):
+        print(i)
+
+def next_mutations(x,y,z):
+    perm = permutations([3,7,4])
+    for i in list(perm):
+        print(i)
+
+def third_mutations(a,b,c,d):
+    perm = permutations([2,3,4,5])
+    for i in list(perm):
+        print()
+
+
+# In[51]:
+
+
+mutations(2,3)
+next_mutations(3,7,4)
+third_mutations(2,3,4,5)
+
+
+# In[ ]:
+
+
+
+
